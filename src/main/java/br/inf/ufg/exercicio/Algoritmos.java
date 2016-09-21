@@ -144,7 +144,7 @@ public class Algoritmos {
 	 *            valor de y para divisao
 	 * 
 	 */
-	public int mod(int x, int y) {
+	public static int mod(int x, int y) {
 		if (x < 0 || y < 0) {
 			throw new IllegalArgumentException("x ou y menor que 0");
 		}
@@ -201,5 +201,31 @@ public class Algoritmos {
 			i++;
 		}
 		return c;
+	}
+	
+	/**
+	 * Algoritmo para calculo de funcao horner
+	 * 
+	 * @param x  valor de x para calculo
+	 * 
+	 * @param g valor de g para calculo
+	 * 
+	 * @param a vetor para avaliacao do polinomio
+	 * 
+	 */
+	
+	public static int horner (int x, int g, int [] a){
+		if (g<=1){
+			throw new IllegalArgumentException("Valor de g menor ou igual a 1");
+		}
+		
+		int p = a.length;
+		int i = g -1;
+		
+		while(0<=i){
+			p = p * x + a[i];
+			i--;
+		}
+		return p;
 	}
 }
