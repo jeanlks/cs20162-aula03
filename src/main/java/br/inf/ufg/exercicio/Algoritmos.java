@@ -14,23 +14,30 @@ public class Algoritmos {
 	 *            valor para soma dos numeros naturais
 	 */
 
-	public int somaNaturais(int n) {
+	public static double somaNaturais(int n) {
+		if (n < 1) {
+			throw new IllegalArgumentException("n menor que 1");
+		}
 		int i = 1;
-		int s = 0;
+		double s = 0;
 		while (i <= n) {
-			int d = 1 + (i ^ 2);
+			double d = (1 + Math.pow(i, 2));
 			s = s + 1 / d;
-			i++;
+			i = i + i;
 		}
 		return s;
 	}
 
 	public static double pi(int n) {
-		int i = 1;
-		int s = -1;
-		int d = -1;
-		int p = 0;
-		while (i < n) {
+		if (n < 1) {
+			throw new IllegalArgumentException("n menor que 1");
+		}
+		double i = 1.0;
+		double s = -1.0;
+		double d = -1.0;
+		double p = 0.0;
+
+		while (i <= n) {
 			d = d + 2;
 			s = -1 * s;
 			p = p + 4 * s / d;
@@ -122,7 +129,7 @@ public class Algoritmos {
 	 * 
 	 * 
 	 */
-	public boolean quadradoPerfeito(int k) {
+	public static boolean quadradoPerfeito(int k) {
 		if (k < 1) {
 			throw new IllegalArgumentException("k menor que 1");
 		}
@@ -202,30 +209,36 @@ public class Algoritmos {
 		}
 		return c;
 	}
-	
+
 	/**
 	 * Algoritmo para calculo de funcao horner
 	 * 
-	 * @param x  valor de x para calculo
+	 * @param x
+	 *            valor de x para calculo
 	 * 
-	 * @param g valor de g para calculo
+	 * @param g
+	 *            valor de g para calculo
 	 * 
-	 * @param a vetor para avaliacao do polinomio
+	 * @param a
+	 *            vetor para avaliacao do polinomio
 	 * 
 	 */
-	
-	public static int horner (int x, int g, int [] a){
-		if (g<=1){
+
+	public static double horner(int x, int g, int[] a) {
+		if (g <= 1) {
 			throw new IllegalArgumentException("Valor de g menor ou igual a 1");
 		}
-		
+
 		int p = a.length;
-		int i = g -1;
-		
-		while(0<=i){
+		int i = g - 1;
+
+		while (0 <= i) {
 			p = p * x + a[i];
 			i--;
 		}
 		return p;
 	}
+
+	
+
 }
