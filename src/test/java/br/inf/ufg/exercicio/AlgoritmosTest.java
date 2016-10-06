@@ -106,11 +106,11 @@ public class AlgoritmosTest {
 	}
 	@Test(expected = IllegalArgumentException.class)
 	public void razaoAureaXSmallerThan0Test(){
-		Algoritmos.razaoAurea(-3, -2, -1);
+		Algoritmos.razaoAurea(-3, -2, 10);
 	}
 	@Test(expected = IllegalArgumentException.class)
 	public void razaoAureaKSmallerThan0Test(){
-		Algoritmos.razaoAurea(-1, -1, -1);
+		Algoritmos.razaoAurea(20, -1, -1);
 	}
 	// Casos de teste para Soma dos Numeros naturais
 	//	@Test
@@ -124,8 +124,5 @@ public class AlgoritmosTest {
 
 		}
 	
-	@Test
-	public void apenasParaAgradarJacocoTool100PorCentoCobertura() {
-		new Algoritmos();
-	}
+	
 }
