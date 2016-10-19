@@ -86,12 +86,7 @@ public class AlgoritmosTest {
 	}
 	
 	
-	//Testes para funcao horner
-	@Test(expected = IllegalArgumentException.class)
-	public void hornerWrongValueTest(){
-		int a [] = {1,2,3};
-		Algoritmos.horner(1, 1, a);
-	}
+
 	
 	
 	//Testes para razao aurea
@@ -112,11 +107,18 @@ public class AlgoritmosTest {
 	public void razaoAureaKSmallerThan0Test(){
 		Algoritmos.razaoAurea(20, -1, -1);
 	}
+
 	// Casos de teste para Soma dos Numeros naturais
-	//	@Test
-//		public void valorArbitrarioParaSoma() {
-//			assertEquals(6.0, Algoritmos.somaNaturais(3),0.5);
-//		}
+	@Test
+	public void valorArbitrarioParaSoma() {
+		assertEquals(6.0, Algoritmos.somaNaturais(3),2.0);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void numeroMenorQueZeroSomaNatural() {
+		Algoritmos.somaNaturais(0);
+
+	}
 
 		@Test(expected = IllegalArgumentException.class)
 		public void numeroMenoresQueZeroSomaNatural() {

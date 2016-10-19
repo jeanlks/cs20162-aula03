@@ -9,24 +9,21 @@ package br.inf.ufg.exercicio;
 public final class Algoritmos {
 
      /**
-     * Algoritmo para soma de Naturais.
-     *
      * @param n
-     *            valor para soma dos numeros naturais
-     * @return valor de soma dos Naturais.
+     *            número que se deseja saber a soma dos naturais
+     *
+     * @return soma dos números naturais até n
      */
-
-public static double somaNaturais(final int n) {
-        if (n < 1) {
-         throw new IllegalArgumentException("n menor que 1");
-        }
-        int i = 1;
-        double s = 0;
-        while (i <= n) {
-        double d = (1 + Math.pow(i, 2));
-        s = s + 1 / d;
-        i = i + i;
-        }
+public static int somaNaturais(final int n) {
+    if (n <= 0) {
+       throw new IllegalArgumentException("numero <0");
+    }
+    int i = 2;
+    int s = 1;
+    while (i <= n) {
+     s = s + i;
+     i++;
+     }
 return s;
 }
 
@@ -77,31 +74,31 @@ public static int fatorial(final int n) {
 return f;
 }
 
-     /**
-     * Algoritmo para calculo de logaritmos naturais.
-     *
-     * @param n
-     *            valor para calculo do logaritmo
-     * @param k
-     *            base para calculo do logaritmo
-     * @return valor logaritmo
-     */
-public static double logaritmoNatural(final double n, final double k) {
-    if (n < 1 || k < 2) {
-      throw new IllegalArgumentException("n menor que 1 ou k menor que 2");
-    }
-   double p = 0;
-   double f = 0;
-   double i = 2;
-   double e = n + 1;
-   while (i <= k) {
-       p = Math.pow(n, i);
-       f = fatorial((int) i);
-       e = e + p / f;
-       i++;
-   }
-return e;
-}
+//  Não feito   /**
+//     * Algoritmo para calculo de logaritmos naturais.
+//     *
+//     * @param n
+//     *            valor para calculo do logaritmo
+//     * @param k
+//     *            base para calculo do logaritmo
+//     * @return valor logaritmo
+//     */
+//public static double logaritmoNatural(final double n, final double k) {
+//    if (n < 1 || k < 2) {
+//      throw new IllegalArgumentException("n menor que 1 ou k menor que 2");
+//    }
+//   double p = 0;
+//   double f = 0;
+//   double i = 2;
+//   double e = n + 1;
+//   while (i <= k) {
+//       p = Math.pow(n, i);
+//       f = fatorial((int) i);
+//       e = e + p / f;
+//       i++;
+//   }
+//return e;
+//}
 
     /**
      * Algoritmo para calculo de Razao Aurea.
@@ -221,33 +218,33 @@ public static int fibonacci(final int n) {
     return c;
 }
 
-     /**
-     * Algoritmo para calculo de funcao horner.
-     * @param x
-     *            valor de x para calculo
-     * @param g
-     *            valor de g para calculo
-     *
-     * @param a
-     *        vetor para avaliacao do polinomio
-     * @return valor horner
-     *
-     */
-
-public static double horner(final int x, final int g, final int[] a) {
-        if (g <= 1) {
-         throw new IllegalArgumentException("Valor de g <=1");
-        }
-
-        int p = a.length;
-        int i = g - 1;
-
-        while (0 <= i) {
-          p = p * x + a[i];
-          i--;
-     }
-     return p;
-}
+//  Não feito   /**
+//     * Algoritmo para calculo de funcao horner.
+//     * @param x
+//     *            valor de x para calculo
+//     * @param g
+//     *            valor de g para calculo
+//     *
+//     * @param a
+//     *        vetor para avaliacao do polinomio
+//     * @return valor horner
+//     *
+//     */
+//
+//public static double horner(final int x, final int g, final int[] a) {
+//        if (g <= 1) {
+//         throw new IllegalArgumentException("Valor de g <=1");
+//        }
+//
+//        int p = a.length;
+//        int i = g - 1;
+//
+//        while (0 <= i) {
+//          p = p * x + a[i];
+//          i--;
+//     }
+//     return p;
+//}
 
 /**
 * Restringe criação de instância.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2016-10-18T21:09:37.966">
+<file name="/Users/Jean/Documents/workspace/cs20162-aula03/src/main/java/br/inf/ufg/exercicio/Algoritmos.java">
+<violation beginline="207" endline="207" begincolumn="14" endcolumn="19" rule="UselessParentheses" ruleset="Unnecessary" package="br.inf.ufg.exercicio" class="Algoritmos" method="fibonacci" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="207" endline="207" begincolumn="26" endcolumn="31" rule="UselessParentheses" ruleset="Unnecessary" package="br.inf.ufg.exercicio" class="Algoritmos" method="fibonacci" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+</pmd>
